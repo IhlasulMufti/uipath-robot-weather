@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="94EMl1hEUEi1MhiNATAUpg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="google.com/search" CVScreenId="1108a630-5fb7-429e-8fb5-be0edf4f6072" CvTextArea="564, 352, 276, 15" CvType="AnyWordGroup" DesignTimeRectangle="565, 352, 275, 17" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl id='wob_dc' tag='SPAN' type='' class='' /&gt;" Guid="0dc1c04b-69b8-488a-997a-9e9a839105d1" ScopeSelectorArgument="&lt;html app='chrome.exe' title='cuaca makassar - Penelusuran Google' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="2571a29f9a8ac91337137b8ab386eee5.png" xmlns="">0iGtaxg2f2UiorsL9t_4FXQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
