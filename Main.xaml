@@ -105,19 +105,20 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="739,512.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="722,1107" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="city" />
       <Variable x:TypeArguments="x:String" Name="temperature" />
       <Variable x:TypeArguments="x:String" Name="weather" />
       <Variable x:TypeArguments="x:String" Name="outfitSuggestion" />
+      <Variable x:TypeArguments="x:String" Name="rainGear" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Input User" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Input User" sap:VirtualizedContainerService.HintSize="634,57" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -131,7 +132,7 @@
       </ui:InputDialog>
       <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,113" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;Kota: &quot;+city]" />
     </Sequence>
-    <Sequence DisplayName="Get the weather" sap:VirtualizedContainerService.HintSize="450,57" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <Sequence DisplayName="Get the weather" sap:VirtualizedContainerService.HintSize="634,57" sap2010:WorkflowViewState.IdRef="Sequence_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -197,43 +198,40 @@
         </uix:NApplicationCard.TargetApp>
       </uix:NApplicationCard>
     </Sequence>
-    <Sequence DisplayName="Suggestion" sap:VirtualizedContainerService.HintSize="450,253" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <Sequence DisplayName="Suggestion" sap:VirtualizedContainerService.HintSize="634,970" sap2010:WorkflowViewState.IdRef="Sequence_7">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Flowchart sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+      <Flowchart sap:VirtualizedContainerService.HintSize="600,657" sap2010:WorkflowViewState.IdRef="Flowchart_1">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
             <av:Point x:Key="ShapeLocation">275,35</av:Point>
             <av:Size x:Key="ShapeSize">50,50</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">300,85 300,130</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">300,85 300,125</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <Flowchart.StartNode>
-          <x:Reference>__ReferenceID2</x:Reference>
+          <x:Reference>__ReferenceID5</x:Reference>
         </Flowchart.StartNode>
-        <FlowDecision x:Name="__ReferenceID2" DisplayName="Too cold?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-          <FlowDecision.Condition>
-            <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="CInt(temperature) &lt; 5" />
-          </FlowDecision.Condition>
+        <FlowDecision x:Name="__ReferenceID4" Condition="[CInt(temperature) &lt; 5]" DisplayName="Too cold?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              <av:Point x:Key="ShapeLocation">270,130</av:Point>
+              <av:Point x:Key="ShapeLocation">270,240</av:Point>
               <av:Size x:Key="ShapeSize">60,60</av:Size>
-              <av:PointCollection x:Key="TrueConnector">270,160 90,160 90,115</av:PointCollection>
-              <av:PointCollection x:Key="FalseConnector">300,190 300,310</av:PointCollection>
+              <av:PointCollection x:Key="TrueConnector">270,270 90,270 90,225</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">300,300 300,410</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
-            <FlowStep x:Name="__ReferenceID1">
+            <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">35,45</av:Point>
+                  <av:Point x:Key="ShapeLocation">35,155</av:Point>
                   <av:Size x:Key="ShapeSize">110,70</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -253,24 +251,124 @@
             </FlowStep>
           </FlowDecision.True>
           <FlowDecision.False>
-            <FlowDecision x:Name="__ReferenceID0" DisplayName="Too hot?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-              <FlowDecision.Condition>
-                <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="CInt(temperature) &gt; 36" />
-              </FlowDecision.Condition>
+            <FlowDecision x:Name="__ReferenceID0" Condition="[CInt(temperature) &gt; 36]" DisplayName="Too hot?" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <av:Point x:Key="ShapeLocation">270,310</av:Point>
+                  <av:Point x:Key="ShapeLocation">270,410</av:Point>
                   <av:Size x:Key="ShapeSize">60,60</av:Size>
+                  <av:PointCollection x:Key="TrueConnector">270,440 90,440 90,405</av:PointCollection>
+                  <av:PointCollection x:Key="FalseConnector">330,440 470,440 470,405</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
+              <FlowDecision.True>
+                <FlowStep x:Name="__ReferenceID2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">35,335</av:Point>
+                      <av:Size x:Key="ShapeSize">110,70</av:Size>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Assign_2">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[outfitSuggestion]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">Gunakan kaos</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                </FlowStep>
+              </FlowDecision.True>
+              <FlowDecision.False>
+                <FlowStep x:Name="__ReferenceID3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <av:Point x:Key="ShapeLocation">415,335</av:Point>
+                      <av:Size x:Key="ShapeSize">110,70</av:Size>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[outfitSuggestion]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">Gunakan Sweater</InArgument>
+                    </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Assign>
+                </FlowStep>
+              </FlowDecision.False>
             </FlowDecision>
           </FlowDecision.False>
         </FlowDecision>
         <x:Reference>__ReferenceID0</x:Reference>
         <x:Reference>__ReferenceID1</x:Reference>
+        <x:Reference>__ReferenceID2</x:Reference>
+        <x:Reference>__ReferenceID3</x:Reference>
+        <FlowStep x:Name="__ReferenceID5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">245,125</av:Point>
+              <av:Size x:Key="ShapeSize">110,70</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">300,195 300,240</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <If Condition="[weather.Contains(&quot;Gerimis&quot;) or weather.Contains(&quot;mendung&quot;) or weather.Contains(&quot;hujan&quot;)]" DisplayName="If Rain" sap:VirtualizedContainerService.HintSize="502,392" sap2010:WorkflowViewState.IdRef="If_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If.Then>
+              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_4">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[rainGear]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">Bawa payung</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Sequence>
+            </If.Else>
+          </If>
+          <FlowStep.Next>
+            <x:Reference>__ReferenceID4</x:Reference>
+          </FlowStep.Next>
+        </FlowStep>
       </Flowchart>
-      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,113" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[outfitSuggestion]" />
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="600,122" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[outfitSuggestion]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </WriteLine>
+      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="600,108" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Suhu di &quot;+city+&quot; &quot;+temperature+&quot;°C&quot;+vbCr+weather+vbCr+outfitSuggestion+vbCr+rainGear]" />
     </Sequence>
   </Sequence>
 </Activity>
